@@ -1,0 +1,18 @@
+let img;
+function preload() {
+  img =
+loadImage("https://cdn1.iconfinder.com/data/icons/faces-and-emotions/32/hmm_emoji_faces_emotion-512.png")
+}
+
+function setup() {
+  createCanvas(600, 600, WEBGL);    
+  noStroke();
+}
+
+function draw() {
+  background(255);  
+  rotateX(mouseY/-50);
+  rotateY(mouseX/50);
+  texture(img);
+  box(100);
+}
